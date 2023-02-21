@@ -8,7 +8,7 @@
   --color-accent: #0e46a1;
   --color-terniary: #20b15a;
   --color-text: #666;
-  --border-radius-all: 2rem;
+  --border-radius-all: 1.4rem;
   --h1-fontsize: clamp(3.5rem, 3vw, 7rem);
   --h2-fontsize: clamp(3rem, 2vw, 5rem);
   --h3-fontsize: clamp(2rem, 1.3vw, 3.8rem);
@@ -39,10 +39,10 @@ body {
   font-size: var(--p-h4-fontsize);
   background-color: var(--color-primary);
   color: #fff;
-  padding: 1rem 3rem;
-  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-all);
   border: 1px solid var(--color-primary);
-  font-weight: 600;
+  font-weight: 500;
 }
 section {
   padding: 4rem 0;
@@ -87,6 +87,38 @@ svg,
 video {
   max-width: 100%;
   height: auto;
+}
+header {
+  .navbar {
+    @media (min-width: 991px) {
+      .navbar-collapse {
+        .navbar-nav {
+          margin-left: auto;
+          gap: 3rem;
+        }
+      }
+      .btn-all {
+        margin-left: 3rem;
+      }
+    }
+    @media (max-width: 991px) {
+      .navbar-brand {
+        order: 0;
+      }
+      .navbar-toggler {
+        order: 2;
+      }
+      .navbar-collapse {
+        order: 2;
+        .navbar-nav {
+          gap: 0rem;
+        }
+      }
+      .btn-all {
+        order: 1;
+      }
+    }
+  }
 }
 .card {
   border-radius: var(--border-radius-all);
