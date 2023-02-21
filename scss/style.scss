@@ -1,18 +1,19 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;&display=swap");
 :root {
   font-size: 62.5%;
   --color-primary: #3d6cb9;
-  --color-secondary: #83b3ff;
+  --color-secondary: #d8ebf5;
   --color-accent: #0e46a1;
   --color-terniary: #20b15a;
-  --color-text: #666;
+  --color-text: #646464;
+  --card-box-shadow: 0px 0px 2px 1px #1212121a;
   --border-radius-all: 1.4rem;
   --h1-fontsize: clamp(3.5rem, 3vw, 7rem);
-  --h2-fontsize: clamp(3rem, 2vw, 5rem);
+  --h2-fontsize: clamp(3rem, 1.8vw, 4.8rem);
   --h3-fontsize: clamp(2rem, 1.3vw, 3.8rem);
-  --p-h4-fontsize: clamp(1.5rem, 1.1vw, 3rem);
+  --p-h4-fontsize: clamp(1.5rem, 1.2vw, 3rem);
   --h5-fontsize: clamp(1.3rem, 0.9vw, 2.5rem);
   --h6-fontsize: clamp(1.1rem, 0.8vw, 2rem);
 }
@@ -40,6 +41,8 @@ body {
   background-color: var(--color-primary);
   color: #fff;
   padding: 1rem 2rem;
+  width: fit-content;
+  margin: auto;
   border-radius: var(--border-radius-all);
   border: 1px solid var(--color-primary);
   font-weight: 500;
@@ -55,6 +58,7 @@ p {
 li {
   color: var(--color-text);
   font-size: var(--p-h4-fontsize);
+  margin-bottom: 1rem;
 }
 a {
   text-decoration: none;
@@ -63,14 +67,17 @@ a {
 h1 {
   font-size: var(--h1-fontsize);
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 h2 {
   font-size: var(--h2-fontsize);
   font-weight: 700;
+  margin-bottom: 1rem;
 }
 h3 {
   font-size: var(--h3-fontsize);
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 h4 {
   font-size: var(--p-h4-fontsize);
@@ -90,16 +97,17 @@ video {
 }
 header {
   .navbar {
-    @media (min-width: 991px) {
-      .navbar-collapse {
-        .navbar-nav {
-          margin-left: auto;
-          gap: 3rem;
+    .navbar-collapse {
+      .navbar-nav {
+        margin-left: auto;
+        gap: 3rem;
+        .nav-item {
+          margin-bottom: 0;
         }
       }
-      .btn-all {
-        margin-left: 3rem;
-      }
+    }
+    .btn-all {
+      margin-left: 3rem;
     }
     @media (max-width: 991px) {
       .navbar-brand {
@@ -116,6 +124,7 @@ header {
       }
       .btn-all {
         order: 1;
+        margin-left: 0rem;
       }
     }
     .dropdown-menu {
@@ -139,12 +148,61 @@ header {
     }
   }
 }
-
 .card {
   border-radius: var(--border-radius-all);
-  //   background-color: var(--color-card-background);
   border: none;
   .card-body {
-    padding: clamp(0.5rem, 100vw, 1.8rem);
+    padding: clamp(1rem, 100vw, 2.25rem);
+  }
+}
+.card:has(form) {
+  background-color: var(--color-primary);
+  color: #fff;
+  span {
+    display: block;
+    text-align: center;
+    font-size: var(--h3-fontsize);
+    margin-bottom: 2rem;
+  }
+  form {
+    .form-control {
+      font-size: var(--p-h4-fontsize);
+      resize: none;
+      background-color: var(--color-primary);
+      border-radius: 0;
+      border: none;
+      border-bottom: 2px solid #fff;
+      margin-bottom: 2rem;
+      &::placeholder {
+        font-size: var(--h5-fontsize);
+        color: #dadada;
+      }
+    }
+    .btn-all {
+      background-color: #fff;
+      color: var(--color-primary);
+    }
+  }
+}
+.hero {
+  background-color: var(--color-secondary);
+  .container {
+    > .row {
+      align-items: center;
+      justify-content: center;
+      --bs-gutter-x: 3rem;
+      --bs-gutter-y: 3rem;
+      ul {
+        columns: 3;
+        margin-bottom: 0;
+      }
+      @media (max-width: 576px) {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 1.5rem;
+        ul {
+          columns: 1;
+        }
+      }
+    }
   }
 }

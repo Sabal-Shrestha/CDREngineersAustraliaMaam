@@ -1,0 +1,12 @@
+.index {
+  .review-with-form {
+    .container {
+      > .row {
+        align-items: center;
+        justify-content: center;
+        // --bs-gutter-x: 3rem;
+        // --bs-gutter-y: 3rem;
+      }
+    }
+  }
+}
