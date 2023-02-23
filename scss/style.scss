@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;&display=swap");
+@import "mixin";
 :root {
   font-size: 62.5%;
   --color-primary: #3d6cb9;
@@ -11,22 +12,13 @@
   --card-box-shadow: 0px 0px 2px 1px #1212121a;
   --border-radius-all: 1.4rem;
   --h1-fontsize: clamp(3.5rem, 3vw, 7rem);
-  --h2-fontsize: clamp(3rem, 1.8vw, 4.8rem);
-  --h3-fontsize: clamp(2rem, 1.3vw, 3.8rem);
+  --h2-fontsize: clamp(3rem, 2vw, 4.5rem);
+  --h3-fontsize: clamp(2rem, 1.4vw, 3.8rem);
   --p-h4-fontsize: clamp(1.5rem, 1.2vw, 3rem);
   --h5-fontsize: clamp(1.3rem, 0.9vw, 2.5rem);
   --h6-fontsize: clamp(1.1rem, 0.8vw, 2rem);
 }
-@mixin row-align-center {
-  align-items: center;
-  justify-content: center;
-  --bs-gutter-x: 3rem;
-  --bs-gutter-y: 3rem;
-  @media (max-width: 576px) {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 1.5rem;
-  }
-}
+
 *,
 *::before,
 *::after {
@@ -196,34 +188,55 @@ header {
 }
 .hero {
   background-color: var(--color-secondary);
-  .container {
-    > .row {
-      @include row-align-center;
-      ul {
-        columns: 3;
-        margin-bottom: 0;
-      }
-      @media (max-width: 576px) {
-        ul {
-          columns: 1;
-        }
-      }
+  @include row-align-center;
+  ul {
+    columns: 3;
+    margin-bottom: 0;
+  }
+  @media (max-width: 576px) {
+    ul {
+      columns: 1;
     }
   }
 }
 footer {
   .contact-us {
-    .container > .row {
-      @include row-align-center;
+    @include row-align-center;
+    p {
+      font-size: var(--h3-fontsize);
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        font-size: var(--h3-fontsize);
+      }
+    }
+    .col-lg-4 {
+      position: relative;
+      @media (max-width: 576px) {
+        img {
+          display: none;
+        }
+      }
+      img {
+        width: 150px;
+        position: absolute;
+        bottom: 0;
+        right: -10rem;
+      }
     }
   }
   .useful-links {
     padding-bottom: 0;
     background-color: var(--color-primary);
     p,
-    a,
+    a {
+      color: #fff;
+    }
     h4 {
       color: #fff;
+      font-size: var(--h3-fontsize);
     }
     .card {
       background-color: #fff;

@@ -1,11 +1,114 @@
+@import "mixin";
 .index {
   .review-with-form {
+    @include row-align-center;
+  }
+  .how-we-work {
     .container {
-      > .row {
-        align-items: center;
-        justify-content: center;
-        // --bs-gutter-x: 3rem;
-        // --bs-gutter-y: 3rem;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      position: relative;
+      .center-line {
+        position: absolute;
+        height: 100%;
+        width: 4px;
+        background: var(--color-accent);
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        .scroll-icon {
+          position: absolute;
+          background: var(--color-primary);
+          height: 40px;
+          width: 40px;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 50%;
+          color: #fff;
+          font-size: 17px;
+          box-shadow: 0 0 0 4px var(--color-accent),
+            inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+          bottom: 0px;
+          left: 50%;
+          font-size: 25px;
+          transform: translateX(-50%);
+        }
+      }
+      .row {
+        display: flex;
+        .cols {
+          border-radius: 5px;
+          width: calc(50% - 40px);
+          padding: 20px;
+          position: relative;
+          .line-number {
+            position: absolute;
+            background: var(--color-primary);
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 17px;
+            box-shadow: 0 0 0 4px var(--color-accent),
+              inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+          }
+        }
+      }
+      .row-1 {
+        justify-content: flex-start;
+        .cols .line-number {
+          top: 15px;
+          right: -60px;
+        }
+      }
+      .cols-img {
+        width: 50%;
+        text-align: center;
+      }
+      .row-2 {
+        justify-content: flex-end;
+        .cols .line-number {
+          top: 15px;
+          left: -60px;
+        }
+      }
+      @media (width<=991px) {
+        .center-line {
+          left: 40px;
+        }
+        .row {
+          margin: 30px 0 3px 60px;
+          .cols {
+            width: 100%;
+          }
+        }
+        .row-1 .cols {
+          .line-number {
+            left: -60px;
+          }
+          &::before {
+            left: -7px;
+          }
+        }
+        .cols-img {
+          width: 100%;
+        }
+      }
+      @media (width<=576px) {
+        .center-line {
+          display: none;
+        }
+        .row {
+          margin: 10px 0;
+          .cols {
+            .line-number,
+            &::before {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
