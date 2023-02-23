@@ -17,6 +17,16 @@
   --h5-fontsize: clamp(1.3rem, 0.9vw, 2.5rem);
   --h6-fontsize: clamp(1.1rem, 0.8vw, 2rem);
 }
+@mixin row-align-center {
+  align-items: center;
+  justify-content: center;
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 3rem;
+  @media (max-width: 576px) {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+  }
+}
 *,
 *::before,
 *::after {
@@ -188,20 +198,68 @@ header {
   background-color: var(--color-secondary);
   .container {
     > .row {
-      align-items: center;
-      justify-content: center;
-      --bs-gutter-x: 3rem;
-      --bs-gutter-y: 3rem;
+      @include row-align-center;
       ul {
         columns: 3;
         margin-bottom: 0;
       }
       @media (max-width: 576px) {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 1.5rem;
         ul {
           columns: 1;
         }
+      }
+    }
+  }
+}
+footer {
+  .contact-us {
+    .container > .row {
+      @include row-align-center;
+    }
+  }
+  .useful-links {
+    padding-bottom: 0;
+    background-color: var(--color-primary);
+    p,
+    a,
+    h4 {
+      color: #fff;
+    }
+    .card {
+      background-color: #fff;
+      width: 30%;
+      + p {
+        margin: 1.5rem 0;
+      }
+    }
+    ol {
+      list-style: none;
+      display: flex;
+      padding-left: 0;
+      li {
+        background-color: #fff;
+        width: var(--h1-fontsize);
+        height: var(--h1-fontsize);
+        line-height: var(--h1-fontsize);
+        font-size: clamp(2rem, 1.5vw, 3rem);
+        text-align: center;
+        border-radius: 50%;
+        color: #fff;
+        margin-right: 1rem;
+        a {
+          color: var(--color-primary);
+        }
+      }
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      li:before {
+        content: "\F285";
+        color: #fff;
+        font-family: bootstrap-icons !important;
+        vertical-align: middle;
+        margin-right: 0.5rem;
       }
     }
   }
