@@ -6,6 +6,37 @@
   .review-with-form {
     @include row-align-center;
   }
+  .index-services {
+    .container {
+      .row {
+        align-items: center;
+        .index-services__box {
+          > * {
+            transition: color 0.5s linear, visibility 0.3s linear,
+              opacity 0.3s linear;
+          }
+          a {
+            visibility: hidden;
+            opacity: 0;
+          }
+          &:hover {
+            h3 {
+              color: var(--color-primary);
+            }
+            a {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+        img {
+          padding: 2rem;
+          border: 1px dashed var(--color-text);
+          border-radius: 50%;
+        }
+      }
+    }
+  }
   .how-we-work {
     .container {
       margin: 5rem auto;
@@ -38,7 +69,6 @@
         }
       }
       .row {
-        display: flex;
         .cols {
           border-radius: 5px;
           width: calc(50% - 40px);

@@ -10,7 +10,8 @@
   --color-terniary: #20b15a;
   --color-text: #646464;
   --card-box-shadow: 0px 0px 2px 1px #1212121a;
-  --border-radius-all: 1.4rem;
+  --border-radius-all: 1.2rem;
+  --border-radius-btn: 2.4rem;
   --h1-fontsize: clamp(3.5rem, 3vw, 7rem);
   --h2-fontsize: clamp(3rem, 2vw, 4.5rem);
   --h3-fontsize: clamp(2rem, 1.4vw, 3.8rem);
@@ -45,7 +46,7 @@ body {
   padding: 1rem 2rem;
   width: fit-content;
   margin: auto;
-  border-radius: var(--border-radius-all);
+  border-radius: var(--border-radius-btn);
   border: 1px solid var(--color-primary);
   font-weight: 500;
 }
@@ -193,6 +194,9 @@ header {
 }
 .hero {
   @include row-align-center;
+  background: url("../img/hero-temp-bottom-wave.webp") 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   ul {
     columns: 3;
     margin-bottom: 0;
@@ -278,6 +282,40 @@ footer {
         font-family: bootstrap-icons !important;
         vertical-align: middle;
         margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.services-grid {
+  @include row-align-center;
+  background: linear-gradient(
+      to bottom,
+      rgba(61, 108, 185, 0.9) 0%,
+      rgba(61, 108, 185, 0.9) 40%,
+      transparent 40%
+    ),
+    url("../img/background-grid.webp");
+  background-size: cover, 100% 40%;
+  background-repeat: no-repeat;
+  .small-heading2 {
+    color: #fff;
+    + p {
+      text-align: center;
+      color: #fff;
+      font-size: var(--h1-fontsize);
+    }
+  }
+  .col {
+    .card {
+      position: relative;
+      box-shadow: var(--card-box-shadow);
+      h3 {
+        text-align: center;
+        margin-top: 1rem;
+      }
+      img {
+        border-top-right-radius: var(--border-radius-all);
+        border-top-left-radius: var(--border-radius-all);
       }
     }
   }
