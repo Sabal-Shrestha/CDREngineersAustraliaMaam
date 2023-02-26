@@ -1,0 +1,38 @@
+@import "mixin";
+.blogs-grid .card {
+  position: relative;
+}
+.blogs-grid .card img {
+  border-top-right-radius: var(--border-radius-all);
+  border-top-left-radius: var(--border-radius-all);
+}
+.blogs-grid .card .blog-date {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+.blogs-grid .card .blog-date i {
+  margin-right: 0.75rem;
+}
+.latest-blog {
+  background-color: var(--background-color-grey);
+}
+@media (min-width: 991px) {
+  .latest-blog .card {
+    width: 80%;
+    margin: auto;
+  }
+}
+.other-blogs {
+  @include row-align-center;
+}
+.other-blogs .card {
+  box-shadow: var(--card-box-shadow);
+}
+.other-blogs .card p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

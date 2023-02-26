@@ -39,7 +39,6 @@
   }
   .how-we-work {
     .container {
-      margin: 5rem auto;
       padding: 0 2rem;
       position: relative;
       .center-line {
@@ -107,7 +106,7 @@
           left: -60px;
         }
       }
-      @media (width<=991px) {
+      @media (max-width: 991px) {
         .center-line {
           left: 40px;
         }
@@ -129,7 +128,8 @@
           width: 100%;
         }
       }
-      @media (width<=576px) {
+      @media (max-width: 576px) {
+        padding: 0;
         .center-line {
           display: none;
         }
