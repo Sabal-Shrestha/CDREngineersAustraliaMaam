@@ -161,6 +161,28 @@
           </div>
         </div>
       </section>
+      <section class="growing-image">
+        <div class="container">
+          <div class="growingImage">
+            <div class="growingImage__grown-img">
+              <img src="../img/image-grow-on-hover-1.webp" alt="" />
+              <p>15 Points</p>
+            </div>
+            <div class="growingImage__shrunk-img">
+              <img src="../img/image-grow-on-hover-1.webp" alt="" />
+              <p>15 Points</p>
+            </div>
+            <div class="growingImage__shrunk-img">
+              <img src="../img/image-grow-on-hover-1.webp" alt="" />
+              <p>15 Points</p>
+            </div>
+            <div class="growingImage__shrunk-img">
+              <img src="../img/image-grow-on-hover-1.webp" alt="" />
+              <p>15 Points</p>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="pricing-grid">
         <div class="container">
           <h2 class="small-heading2">Pricing Plan</h2>
@@ -488,5 +510,30 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script>
+      const defaultImage = document.querySelector(
+        ".growingImage .growingImage__grown-img"
+      );
+      const growingImage = document.querySelectorAll(
+        ".growingImage .growingImage__shrunk-img"
+      );
+      growingImage.forEach((image) => {
+        image.addEventListener("mouseover", () => {
+          defaultImage.classList.remove("growingImage__grown-img");
+          defaultImage.classList.add("growingImage__shrunk-img");
+
+          image.classList.remove("growingImage__shrunk-img");
+          image.classList.add("growingImage__grown-img");
+        });
+
+        image.addEventListener("mouseout", () => {
+          image.classList.add("growingImage__shrunk-img");
+          image.classList.remove("growingImage__grown-img");
+
+          defaultImage.classList.remove("growingImage__shrunk-img");
+          defaultImage.classList.add("growingImage__grown-img");
+        });
+      });
+    </script>
   </body>
 </html>
