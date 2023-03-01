@@ -17,7 +17,7 @@
   --h2-fontsize: clamp(3rem, 2vw, 4.5rem);
   --h3-fontsize: clamp(2rem, 1.4vw, 3.8rem);
   --p-h4-fontsize: clamp(1.5rem, 1.2vw, 3rem);
-  --h5-fontsize: clamp(1.3rem, 0.9vw, 2.5rem);
+  --h5-fontsize: clamp(1.3rem, 1vw, 2.5rem);
   --h6-fontsize: clamp(1.1rem, 0.8vw, 2rem);
 }
 
@@ -255,6 +255,46 @@ header {
   @media (max-width: 576px) {
     ul {
       columns: 1;
+    }
+  }
+}
+.cards-with-rotated-icon-border {
+  .cols {
+    .card {
+      box-shadow: var(--card-box-shadow);
+      text-align: center;
+      height: 100%;
+      .rotated-border {
+        border: solid 1px;
+        border-radius: 0.8rem;
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        transform: rotate(45deg);
+        margin: 0 auto 1rem;
+        color: #fff;
+        i {
+          display: block;
+          font-size: var(--h3-fontsize);
+          transform: rotate(-45deg);
+        }
+        &:has(.bi-currency-dollar) {
+          background-color: #97c993;
+        }
+        &:has(.bi-check-square) {
+          background-color: #ff8345;
+        }
+        &:has(.bi-clock) {
+          background-color: #45c7ff;
+        }
+        &:has(.bi-journal-medical) {
+          background-color: #cf8bd4;
+        }
+      }
+      p {
+        text-align: center;
+        font-size: var(--h5-fontsize);
+      }
     }
   }
 }
