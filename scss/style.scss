@@ -645,3 +645,49 @@ footer {
     }
   }
 }
+.numbers-with-multple-colored-border {
+  .col-lg-6:nth-of-type(even) {
+    margin-left: auto;
+    margin-top: -5rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    > span {
+      display: block;
+      margin: 4.2rem 1rem 0 1.5rem;
+      font-size: var(--h3-fontsize);
+      padding: 1rem 2rem;
+      height: min-content;
+      width: min-content;
+      border-radius: 50%;
+      box-shadow: 0 0 0 10px #b5d6f8, 0 0 0 20px #d9ebfb;
+      color: white;
+      text-align: center;
+      background-color: var(--color-primary);
+    }
+    .card-body {
+      position: relative;
+      span {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: clamp(8rem, 6vw, 10rem);
+        font-weight: 700;
+        color: #bdddfd57;
+      }
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      > span {
+        margin: 2rem auto 1rem;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .col-lg-6:nth-of-type(even) {
+      margin: auto;
+    }
+  }
+}
