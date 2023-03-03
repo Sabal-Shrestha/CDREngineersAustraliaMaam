@@ -311,10 +311,22 @@
 }
 .waterfall-card {
   .row {
-    .col-lg-3 {
-      .card {
-        position: relative;
-        border: 1px solid var(--color-primary);
+    .card {
+      position: relative;
+      border: 1px solid var(--color-primary);
+      text-align: center;
+      i {
+        color: var(--color-primary);
+        font-size: var(--h3-fontsize);
+      }
+      h3 {
+        font-size: var(--p-h4-fontsize);
+      }
+      p {
+        text-align: center;
+        font-size: var(--h5-fontsize);
+      }
+      @media (min-width: 991px) {
         &::after {
           position: absolute;
           content: "";
@@ -324,7 +336,7 @@
             transparent,
             transparent 5px,
             #000 5px,
-            #000 6px
+            #000 8px
           );
           width: 175px;
           height: 2px;
@@ -341,13 +353,12 @@
             transparent,
             transparent 5px,
             #000 5px,
-            #000 6px
+            #000 8px
           );
           width: 2px;
-          height: 45px;
+          height: 70px;
           right: -175px;
-          bottom: 32%;
-          transform: translateY(-32%);
+          top: 50%;
         }
         &.waterfall-card__second-card {
           margin-top: 20rem;
@@ -357,8 +368,8 @@
         }
         &.waterfall-card__fourth-card {
           margin-top: 60rem;
-          &::after,
-          &::before {
+          &::before,
+          &::after {
             background: none;
           }
         }
