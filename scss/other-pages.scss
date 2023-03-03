@@ -309,3 +309,60 @@
     }
   }
 }
+.waterfall-card {
+  .row {
+    .col-lg-3 {
+      .card {
+        position: relative;
+        border: 1px solid var(--color-primary);
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          background: repeating-linear-gradient(
+            to right,
+            transparent,
+            transparent 5px,
+            #000 5px,
+            #000 6px
+          );
+          width: 175px;
+          height: 2px;
+          right: -175px;
+          bottom: 50%;
+          transform: translateY(-50%);
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          display: block;
+          background: repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 5px,
+            #000 5px,
+            #000 6px
+          );
+          width: 2px;
+          height: 45px;
+          right: -175px;
+          bottom: 32%;
+          transform: translateY(-32%);
+        }
+        &.waterfall-card__second-card {
+          margin-top: 20rem;
+        }
+        &.waterfall-card__third-card {
+          margin-top: 40rem;
+        }
+        &.waterfall-card__fourth-card {
+          margin-top: 60rem;
+          &::after,
+          &::before {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
