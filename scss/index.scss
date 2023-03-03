@@ -8,6 +8,16 @@
   }
   .why-choose-us {
     @include row-align-center;
+    .counter {
+      p:has(span) {
+        font-size: var(--h3-fontsize);
+        font-weight: 500;
+        color: var(--color-primary);
+        span {
+          color: black;
+        }
+      }
+    }
   }
   .index-services {
     .container {

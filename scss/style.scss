@@ -271,7 +271,7 @@ header {
         height: 5rem;
         line-height: 5rem;
         transform: rotate(45deg);
-        margin: 0 auto 1rem;
+        margin: 0 auto;
         color: #fff;
         i {
           display: block;
@@ -290,6 +290,9 @@ header {
         &:has(.bi-journal-medical) {
           background-color: #cf8bd4;
         }
+      }
+      h3 {
+        margin: 1.5rem 0 1rem;
       }
       p {
         text-align: center;

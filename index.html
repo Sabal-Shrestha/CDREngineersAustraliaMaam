@@ -192,21 +192,21 @@
               </p>
               <a href="contact-us.html" class="btn-all">Let's Chat</a>
               <hr class="my-5" />
-              <div class="row row-cols-2">
+              <div class="counter row row-cols-2">
                 <div class="cols">
-                  <h3>230 +</h3>
+                  <p><span id="counter1">0</span> +</p>
                   <p>Satisifed Customers</p>
                 </div>
                 <div class="cols">
-                  <h3>230 +</h3>
-                  <p>Professional agents</p>
+                  <p><span id="counter2">0</span> +</p>
+                  <p>Professional Agents</p>
                 </div>
                 <div class="cols">
-                  <h3>230 +</h3>
+                  <p><span id="counter3">0</span> +</p>
                   <p>Hours Support</p>
                 </div>
                 <div class="cols">
-                  <h3>230 +</h3>
+                  <p><span id="counter4">0</span> +</p>
                   <p>Project Finished</p>
                 </div>
               </div>
@@ -749,5 +749,47 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function autoIncreaseNumber(counter, maxNumber, duration) {
+        let currentNumber = 0;
+        const increment = maxNumber / (duration / 10);
+
+        function increaseNumber() {
+          currentNumber += increment;
+          if (currentNumber <= maxNumber) {
+            counter.textContent = Math.floor(currentNumber);
+          } else {
+            counter.textContent = maxNumber;
+            clearInterval(interval);
+          }
+        }
+
+        const interval = setInterval(increaseNumber, 10);
+      }
+
+      // Get the target counters and maximum numbers
+      const counter1 = document.getElementById("counter1");
+      const maxNumber1 = 230;
+      const counter2 = document.getElementById("counter2");
+      const maxNumber2 = 89;
+      const counter3 = document.getElementById("counter3");
+      const maxNumber3 = 50;
+      const counter4 = document.getElementById("counter4");
+      const maxNumber4 = 2348;
+
+      // Determine the max duration based on the maximum number
+      const maxDuration = Math.max(
+        maxNumber1,
+        maxNumber2,
+        maxNumber3,
+        maxNumber4
+      );
+
+      // Call the auto-increasing function for each counter with the same duration
+      autoIncreaseNumber(counter1, maxNumber1, maxDuration);
+      autoIncreaseNumber(counter2, maxNumber2, maxDuration);
+      autoIncreaseNumber(counter3, maxNumber3, maxDuration);
+      autoIncreaseNumber(counter4, maxNumber4, maxDuration);
+    </script>
   </body>
 </html>
