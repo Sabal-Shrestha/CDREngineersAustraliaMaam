@@ -298,6 +298,35 @@ header {
     }
   }
 }
+.call-to-action {
+  background-color: var(--background-color-grey);
+  text-align: center;
+  h3 {
+    font-size: var(--h2-fontsize);
+    color: var(--color-primary);
+  }
+  p {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .btn-all {
+    background-color: #fa2545;
+    border-color: #fa2545;
+  }
+  .one-line-cta {
+    @media (min-width: 991px) {
+      display: flex;
+      justify-content: space-around;
+      h3 {
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+      .btn-all {
+        margin: 0;
+      }
+    }
+  }
+}
 .frequently-asked-question {
   .accordion {
     @media (min-width: 991px) {

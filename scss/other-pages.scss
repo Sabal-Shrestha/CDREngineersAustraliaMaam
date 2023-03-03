@@ -85,7 +85,7 @@
     // }
   }
 }
-.pricing-grid {
+.pricing-cards {
   .small-heading2 + p {
     text-align: center;
     color: black;
@@ -223,6 +223,29 @@
           justify-content: center;
         }
       }
+    }
+  }
+}
+.our-features {
+  text-align: center;
+  h2 + p {
+    margin-bottom: 2rem;
+  }
+  p {
+    text-align: center;
+  }
+  .card {
+    border: 1px solid var(--color-primary);
+    height: 100%;
+    i {
+      font-size: var(--h2-fontsize);
+      color: var(--color-primary);
+    }
+    h3 {
+      margin: 1rem 0;
+    }
+    p {
+      font-size: var(--h5-fontsize);
     }
   }
 }
