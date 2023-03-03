@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./styles/index.min.css" />
   </head>
   <body>
-    <header>
+    <header class="fixed-top" id="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <a
@@ -30,7 +30,7 @@
             ><img
               width="100px"
               height="auto"
-              src="./img/cdr-engineers-australia-logo.svg"
+              src="./img/logo-cdr-engineers.webp"
               alt=""
           /></a>
           <button
@@ -142,7 +142,10 @@
               </li>
             </ul>
           </div>
-          <a href="tel:+61485854463" class="btn-all">+61 485 854 463</a>
+          <a href="tel:+61485854463" class="btn-all"
+            ><i class="bi-telephone-outbound"></i>
+            <span>+61 485 854 463</span></a
+          >
         </nav>
       </div>
     </header>
@@ -769,11 +772,11 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="./main.js"></script>
     <script>
       function autoIncreaseNumber(counter, maxNumber, duration) {
         let currentNumber = 0;
         const increment = maxNumber / (duration / 10);
-
         function increaseNumber() {
           currentNumber += increment;
           if (currentNumber <= maxNumber) {
@@ -783,17 +786,15 @@
             clearInterval(interval);
           }
         }
-
+        let interval; // Declare interval outside the IntersectionObserver
         const observer = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting) {
-            const interval = setInterval(increaseNumber, 10);
+            interval = setInterval(increaseNumber, 10);
             observer.disconnect();
           }
         });
-
         observer.observe(counter);
       }
-
       // Get the target counters and maximum numbers
       const counter1 = document.getElementById("counter1");
       const maxNumber1 = 230;
@@ -803,7 +804,6 @@
       const maxNumber3 = 50;
       const counter4 = document.getElementById("counter4");
       const maxNumber4 = 2348;
-
       // Determine the max duration based on the maximum number
       const maxDuration = Math.max(
         maxNumber1,
@@ -811,7 +811,6 @@
         maxNumber3,
         maxNumber4
       );
-
       // Call the auto-increasing function for each counter with the same duration
       autoIncreaseNumber(counter1, maxNumber1, maxDuration);
       autoIncreaseNumber(counter2, maxNumber2, maxDuration);

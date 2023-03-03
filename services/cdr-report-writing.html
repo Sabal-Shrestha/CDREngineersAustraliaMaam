@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../styles/other-pages.min.css" />
   </head>
   <body>
-    <header>
+    <header class="fixed-top" id="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <a
@@ -136,7 +136,10 @@
               </li>
             </ul>
           </div>
-          <a href="tel:+61485854463" class="btn-all">+61 485 854 463</a>
+          <a href="tel:+61485854463" class="btn-all"
+            ><i class="bi-telephone-outbound"></i>
+            <span>+61 485 854 463</span></a
+          >
         </nav>
       </div>
     </header>
@@ -383,12 +386,6 @@
           </div>
         </div>
       </section>
-      <section class="call-to-action">
-        <div class="container one-line-cta">
-          <h3>Get Free Consultation from our Expert CDR Report Writers</h3>
-          <a href="./contact-us.html" class="btn-all">Let’s Chat</a>
-        </div>
-      </section>
       <section class="our-features">
         <div class="container">
           <h2 class="styled-heading">
@@ -463,6 +460,12 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="call-to-action">
+        <div class="container one-line-cta">
+          <h3>Get Free Consultation from our Expert CDR Report Writers</h3>
+          <a href="./contact-us.html" class="btn-all">Let’s Chat</a>
         </div>
       </section>
       <section class="frequently-asked-question">
@@ -720,6 +723,7 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="../main.js"></script>
     <script>
       const defaultImage = document.querySelector(
         ".growingImage .growingImage__grown-img"
