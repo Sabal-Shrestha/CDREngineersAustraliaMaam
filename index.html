@@ -764,7 +764,14 @@
           }
         }
 
-        const interval = setInterval(increaseNumber, 10);
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            const interval = setInterval(increaseNumber, 10);
+            observer.disconnect();
+          }
+        });
+
+        observer.observe(counter);
       }
 
       // Get the target counters and maximum numbers
