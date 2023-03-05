@@ -1,4 +1,9 @@
 @import "mixin";
+html {
+  scroll-padding-top: 6rem;
+  // scroll-padding-top: 27rem;
+  // scroll-padding-top: 34rem;
+}
 .blogs-grid {
   .card {
     position: relative;
@@ -39,7 +44,7 @@
   }
 }
 .single-post {
-  padding-top: 7rem;
+  padding: 0;
   img {
     display: block;
     margin: 0 auto 2rem;
@@ -52,6 +57,9 @@
     }
   }
   .accordion.table-of-content {
+    position: sticky;
+    overflow-y: auto;
+    top: 0;
     .accordion-item {
       .accordion-button {
         font-size: var(--h2-font-size);
@@ -63,7 +71,8 @@
     @media (min-width: 991px) {
       position: sticky;
       overflow-y: auto;
-      top: 7rem;
+      top: 0.5rem;
+
       height: 90vh;
       padding: 1px;
       &::-webkit-scrollbar {
