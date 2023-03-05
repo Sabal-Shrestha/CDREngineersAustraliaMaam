@@ -5,6 +5,16 @@
   }
   .review-with-form {
     @include row-align-center;
+    .carousel {
+      .carousel-item-next:not(.carousel-item-start),
+      .active.carousel-item-end {
+        transform: translateY(100%);
+      }
+      .carousel-item-prev:not(.carousel-item-end),
+      .active.carousel-item-start {
+        transform: translateY(-100%);
+      }
+    }
   }
   .why-choose-us {
     @include row-align-center;
