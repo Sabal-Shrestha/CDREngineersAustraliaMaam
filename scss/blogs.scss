@@ -44,15 +44,49 @@
     display: block;
     margin: 0 auto 2rem;
   }
-  .col-lg-4 {
-    position: sticky;
-    top: 7rem;
-    height: 100vh;
-    .card {
-      box-shadow: var(--card-box-shadow);
-      &:hover .styled-heading::after {
-        width: 120px;
+  .card {
+    box-shadow: var(--card-box-shadow);
+    margin-bottom: 2rem;
+    &:hover .styled-heading::after {
+      width: 120px;
+    }
+  }
+  .accordion.table-of-content {
+    .accordion-item {
+      .accordion-button {
+        font-size: var(--h2-font-size);
+        font-weight: 600;
       }
+    }
+  }
+  .col-lg-4 {
+    @media (min-width: 991px) {
+      position: sticky;
+      overflow-y: auto;
+      top: 7rem;
+      height: 90vh;
+      padding: 1px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .share-post {
+      text-align: center;
+      p {
+        text-align: center;
+      }
+      ol {
+        display: flex;
+        padding-left: 0;
+        justify-content: space-evenly;
+        list-style: none;
+        li {
+          font-size: 3rem;
+        }
+      }
+    }
+    .call-to-action-blog {
+      text-align: center;
     }
   }
 }
