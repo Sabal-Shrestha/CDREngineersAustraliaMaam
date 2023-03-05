@@ -385,3 +385,19 @@
     }
   }
 }
+.pricing-table {
+  table {
+    thead {
+      color: #fff;
+      background-color: var(--color-primary);
+    }
+    th,
+    td {
+      padding: 1rem;
+    }
+    + a {
+      display: block;
+      margin: 2rem auto;
+    }
+  }
+}
