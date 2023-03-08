@@ -68,10 +68,14 @@
         position: absolute;
         height: 100%;
         width: 4px;
-        background: var(--color-accent);
         left: 50%;
         top: 20px;
         transform: translateX(-50%);
+        transition: height 0.2s ease-in-out;
+        .progress-bar-filled {
+          background: var(--color-accent);
+          height: 0%;
+        }
         .scroll-icon {
           position: absolute;
           background: var(--color-primary);

@@ -365,6 +365,7 @@
         <h2 class="styled-heading">How does CDR Engineers Australia Work?</h2>
         <div class="container">
           <div class="center-line">
+            <div class="progress-bar-filled"></div>
             <a
               href="#how-we-work"
               class="scroll-icon"
@@ -820,6 +821,27 @@
       autoIncreaseNumber(counter2, maxNumber2, maxDuration);
       autoIncreaseNumber(counter3, maxNumber3, maxDuration);
       autoIncreaseNumber(counter4, maxNumber4, maxDuration);
+    </script>
+    <script>
+      const section = document.getElementById("how-we-work");
+      const progressBar = section.querySelector(".progress-bar-filled");
+      const scrollProgressBar = () => {
+        let scrollDistance = -section.getBoundingClientRect().top + 150;
+        let progressPercentage =
+          (scrollDistance /
+            (section.getBoundingClientRect().height -
+              document.documentElement.clientHeight)) *
+          100;
+        let val = Math.floor(progressPercentage);
+        progressBar.style.height = val + "%";
+        if (val < 0) {
+          progressBar.style.height = "0%";
+        }
+        if (val >= 100) {
+          progressBar.style.height = "100%";
+        }
+      };
+      window.addEventListener("scroll", scrollProgressBar);
     </script>
   </body>
 </html>
