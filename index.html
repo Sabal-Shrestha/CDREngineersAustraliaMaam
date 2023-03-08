@@ -633,6 +633,9 @@
       </section>
     </main>
     <footer>
+      <button class="go-to-top-btn" onclick="goToTop()" id="goToTop">
+        <i class="bi-arrow-up"></i>
+      </button>
       <section class="contact-us">
         <div class="container">
           <h2 class="styled-heading">Contact us (Read Tala ko Text)</h2>
@@ -724,7 +727,7 @@
               <ul>
                 <li><a href="./">Home</a></li>
                 <li><a href="./services/index.html">Services</a></li>
-                <li><a href="./cdr-samples.html">Sample</a></li>
+                <li><a href="./cdr-samples/index.html">Sample</a></li>
                 <li><a href="./pricing.html">Pricing</a></li>
                 <li><a href="./blogs/index.html">Blogs</a></li>
                 <li><a href="./contact-us.html">Contact</a></li>
@@ -826,7 +829,7 @@
       const section = document.getElementById("how-we-work");
       const progressBar = section.querySelector(".progress-bar-filled");
       const scrollProgressBar = () => {
-        let scrollDistance = -section.getBoundingClientRect().top + 150;
+        let scrollDistance = -section.getBoundingClientRect().top + 100;
         let progressPercentage =
           (scrollDistance /
             (section.getBoundingClientRect().height -

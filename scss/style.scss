@@ -387,6 +387,22 @@ header {
   }
 }
 footer {
+  .go-to-top-btn {
+    position: fixed;
+    right: 40px;
+    bottom: -50px;
+    transition: bottom 0.5s ease-in-out;
+    width: var(--h1-fontsize);
+    height: var(--h1-fontsize);
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    i {
+      line-height: var(--h3-fontsize);
+      font-size: var(--h3-fontsize);
+      color: #fff;
+    }
+  }
   .contact-us {
     @include row-align-center;
     p {
