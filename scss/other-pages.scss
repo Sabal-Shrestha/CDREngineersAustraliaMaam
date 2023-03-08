@@ -271,49 +271,71 @@
     }
   }
 }
-.numbers-with-multple-colored-border {
-  .col-lg-6:nth-of-type(even) {
-    margin-left: auto;
-    margin-top: -5rem;
-  }
-  .card {
-    display: flex;
-    flex-direction: row;
-    > span {
-      display: block;
-      margin: 4.2rem 1rem 0 1.5rem;
-      font-size: var(--h3-fontsize);
-      padding: 1rem 2rem;
-      height: min-content;
-      width: min-content;
-      border-radius: 50%;
-      box-shadow: 0 0 0 10px #b5d6f8, 0 0 0 20px #d9ebfb;
-      color: white;
-      text-align: center;
-      background-color: var(--color-primary);
-    }
-    .card-body {
-      position: relative;
-      span {
-        position: absolute;
-        bottom: 2rem;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: clamp(8rem, 6vw, 10rem);
-        font-weight: 700;
-        color: #bdddfd57;
+.step-numbers-with-multple-colored-border {
+  background: url("../img/steps-ladder.svg") 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: 576px) {
+    .col-lg-6:nth-of-type(odd) {
+      .card {
+        border-top-right-radius: 11.5rem 50%;
+        border-bottom-right-radius: 11.5rem 50%;
       }
     }
-    @media (max-width: 576px) {
-      flex-direction: column;
-      > span {
-        margin: 2rem auto 1rem;
+    .col-lg-6:nth-of-type(even) {
+      margin-left: auto;
+      .card {
+        border-top-left-radius: 11.5rem 50%;
+        border-bottom-left-radius: 11.5rem 50%;
+      }
+    }
+  }
+  .card {
+    box-shadow: var(--card-box-shadow);
+    opacity: 0.9;
+    transition: opacity 0.5s ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+    .row {
+      align-items: center;
+      --bs-gutter-x: 0;
+      --bs-gutter-y: 0;
+      .col-md-3 {
+        span {
+          display: block;
+          background-color: var(--color-primary);
+          margin: auto;
+          height: 8rem;
+          width: 8rem;
+          line-height: 8rem;
+          font-size: 5rem;
+          border-radius: 50%;
+          box-shadow: 0 0 0 15px #b5d6f8, 0 0 0 30px #d9ebfb;
+          color: white;
+          text-align: center;
+        }
+        @media (max-width: 576px) {
+          display: none;
+        }
+      }
+      .col-md-9 {
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 2rem;
+          left: 50%;
+          transform: translate(-50%);
+          font-size: clamp(8rem, 6vw, 10rem);
+          font-weight: 700;
+          color: #bdddfd57;
+        }
       }
     }
   }
   @media (max-width: 991px) {
-    .col-lg-6:nth-of-type(even) {
-      margin: auto;
+    .col-lg-6 {
+      margin-bottom: 1rem;
     }
   }
 }
