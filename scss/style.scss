@@ -28,8 +28,8 @@
   margin: 0;
   padding: 0;
   font: inherit;
-  word-break: break-word;
 }
+
 html {
   scroll-behavior: smooth;
   // scroll-padding-top: 7rem;
@@ -113,11 +113,12 @@ p {
   text-align: justify;
   font-size: var(--p-h4-fontsize);
   color: var(--color-text);
+  word-break: break-word;
 }
 li {
   color: var(--color-text);
   font-size: var(--p-h4-fontsize);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 a {
   text-decoration: none;
@@ -137,7 +138,6 @@ a {
   font-weight: 500;
 }
 img,
-picture,
 svg,
 video {
   max-width: 100%;
@@ -165,7 +165,7 @@ header {
             background-size: 0 2px;
             background-repeat: no-repeat;
             background-position: left bottom;
-            transition: background-size 0.3s ease;
+            transition: background-size 0.5s ease;
             &:hover {
               background-size: 100% 2px;
             }
@@ -389,6 +389,7 @@ header {
 footer {
   .go-to-top-btn {
     position: fixed;
+    z-index: 999;
     right: 4%;
     bottom: -50px;
     transition: bottom 0.5s ease-in-out;
@@ -443,7 +444,7 @@ footer {
       background-size: 0 2px;
       background-repeat: no-repeat;
       background-position: left bottom;
-      transition: background-size 0.3s ease;
+      transition: background-size 0.5s ease;
       &:hover {
         background-size: 100% 2px;
       }
