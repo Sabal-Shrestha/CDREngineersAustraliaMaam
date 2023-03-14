@@ -245,7 +245,7 @@ header {
   background: url("../img/hero-wavy-lines.svg");
   background-repeat: repeat;
   background-size: cover;
-  animation: background-animation 500s linear infinite;
+  animation: background-animation 500s linear infinite both;
   @keyframes background-animation {
     0% {
       background-position: 0% 0;
