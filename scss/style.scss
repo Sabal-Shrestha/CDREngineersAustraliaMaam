@@ -43,6 +43,15 @@ body {
 }
 section {
   padding: 5rem 0;
+  opacity: 0;
+  transition: all 2s;
+  filter: blur(1px);
+  transform: translateY(20%);
+}
+.animate-on-scroll {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 h1 {
   font-size: var(--h1-fontsize);
@@ -228,6 +237,10 @@ header {
 }
 .hero {
   @include row-align-center;
+  opacity: 1;
+  // transition: all 2s;
+  filter: blur(0px);
+  transform: translateY(0%);
   padding-top: 10rem;
   background: url("../img/hero-temp-bottom-wave.webp") 100%;
   background-repeat: no-repeat;

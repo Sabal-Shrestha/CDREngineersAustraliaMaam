@@ -13,3 +13,17 @@ window.addEventListener("scroll", () => {
 function goToTop() {
   (document.body.scrollTop = 0), (document.documentElement.scrollTop = 0);
 }
+//
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-on-scroll");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+const hiddenElements = document.querySelectorAll("section");
+hiddenElements.forEach((el) => observer.observe(el));
