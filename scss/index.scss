@@ -1,8 +1,5 @@
 @import "mixin";
 .index {
-  .hero {
-    background-color: var(--color-secondary);
-  }
   .review-with-form {
     @include row-align-center;
     .carousel {

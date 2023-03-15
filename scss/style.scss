@@ -242,7 +242,7 @@ header {
   filter: blur(0px);
   transform: translateY(0%);
   padding-top: 10rem;
-  background: url("../img/hero-wavy-lines.svg");
+  background: url("../img/curvy-lines-smooth.svg"), var(--color-secondary);
   background-repeat: repeat;
   background-size: cover;
   animation: background-animation 450s linear infinite both;
@@ -251,12 +251,14 @@ header {
       background-position: 0% 0;
     }
     100% {
-      background-position: 50000% 0;
+      background-position: 6000% 0;
     }
   }
   ul {
     columns: 3;
-    margin-bottom: 0;
+    li {
+      color: var(--color-primary);
+    }
   }
   @media (max-width: 991px) {
     text-align: center;
@@ -427,6 +429,7 @@ footer {
     }
   }
   .contact-us {
+    background-color: var(--background-color-grey);
     @include row-align-center;
     p {
       font-size: var(--h3-fontsize);
