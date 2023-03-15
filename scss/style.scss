@@ -238,14 +238,14 @@ header {
 .hero {
   @include row-align-center;
   opacity: 1;
-  transition: all 0s;
+  transition: none;
   filter: blur(0px);
   transform: translateY(0%);
   padding-top: 10rem;
   background: url("../img/hero-wavy-lines.svg");
   background-repeat: repeat;
   background-size: cover;
-  animation: background-animation 500s linear infinite both;
+  animation: background-animation 450s linear infinite both;
   @keyframes background-animation {
     0% {
       background-position: 0% 0;
