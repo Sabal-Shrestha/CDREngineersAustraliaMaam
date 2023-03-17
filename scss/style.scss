@@ -125,6 +125,7 @@ p {
   word-break: break-word;
 }
 li {
+  text-align: justify;
   color: var(--color-text);
   font-size: var(--p-h4-fontsize);
   margin-bottom: 0.5rem;
@@ -151,6 +152,7 @@ svg,
 video {
   max-width: 100%;
   height: auto;
+  margin: 1rem auto;
 }
 header {
   transition: background-color 0.5s ease;

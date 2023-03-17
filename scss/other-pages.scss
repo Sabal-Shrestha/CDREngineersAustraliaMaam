@@ -85,6 +85,7 @@
   }
 }
 .pricing-cards {
+  padding-top: 2rem;
   .small-heading2 + p {
     text-align: center;
     color: black;
@@ -273,8 +274,8 @@
     }
   }
 }
-.actual-sample {
-  padding: 4rem 0rem;
+.tabbed-content {
+  padding: 0 0 2rem;
   .container-fluid {
     padding: 2rem 0;
     background: linear-gradient(
@@ -295,7 +296,7 @@
       color: #fff;
     }
   }
-  .container {
+  > .container {
     margin-top: -3.25rem;
     position: relative;
     text-align: center;
@@ -310,6 +311,10 @@
           text-indent: 0;
           padding: 1rem 5rem;
         }
+      }
+      ul,
+      ol {
+        text-align: start;
       }
     }
     @media (max-width: 576px) {
