@@ -31,11 +31,16 @@
       .row {
         align-items: center;
         .index-services__box {
+          margin-top: 1rem;
           > * {
             transition: color 0.5s linear, visibility 0.5s linear,
               opacity 0.5s linear;
           }
+          p {
+            font-size: var(--h5-fontsize);
+          }
           a {
+            font-size: var(--h5-fontsize);
             visibility: hidden;
             opacity: 0;
           }
