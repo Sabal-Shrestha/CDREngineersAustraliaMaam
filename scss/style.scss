@@ -148,11 +148,10 @@ a {
   font-weight: 500;
 }
 img,
-svg,
 video {
   max-width: 100%;
   height: auto;
-  margin: 1rem auto;
+  margin: 0 auto 1rem;
 }
 header {
   transition: background-color 0.5s ease;
