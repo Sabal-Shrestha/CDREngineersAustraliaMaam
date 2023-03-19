@@ -20,6 +20,23 @@
     />
     <link rel="stylesheet" href="../styles/style.min.css" />
     <link rel="stylesheet" href="../styles/other-pages.min.css" />
+    <style>
+      .tabbed-content .row {
+        justify-content: space-evenly;
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 3rem;
+        padding: 1rem;
+      }
+      @media (max-width: 576px) {
+        .tabbed-content .row {
+          --bs-gutter-x: 1.5rem;
+          --bs-gutter-y: 1.5rem;
+        }
+      }
+      .tabbed-content .card {
+        box-shadow: var(--card-box-shadow);
+      }
+    </style>
   </head>
   <body>
     <header class="fixed-top" id="header">
@@ -271,38 +288,42 @@
                   applying that knowledge. The format of RPL report has been
                   laid down below:
                 </p>
-                <div class="row row-cols-1 row-cols-lg-2 g-4">
-                  <div class="col">
+                <div class="row">
+                  <div class="col-12 col-lg-4">
                     <div class="card">
-                      <p>Section 1: Key Areas of Knowledge</p>
-                      <ul>
-                        <li>
-                          Area A: Essential Core ICT Knowledge
-                          <ul>
-                            <li>Topic 1: ICT Professional Knowledge</li>
-                            <li>Topic 2: ICT Problem Solving</li>
-                          </ul>
-                        </li>
-                        <li>
-                          Area B: General ICT Knowledge
-                          <ul>
-                            <li>Topic 3: Technology Resources</li>
-                            <li>Topic 4: Technology Building</li>
-                            <li>Topic 5: ICT Management</li>
-                          </ul>
-                        </li>
-                      </ul>
+                      <div class="card-body">
+                        <p>Section 1: Key Areas of Knowledge</p>
+                        <ul>
+                          <li>
+                            Area A: Essential Core ICT Knowledge
+                            <ul>
+                              <li>Topic 1: ICT Professional Knowledge</li>
+                              <li>Topic 2: ICT Problem Solving</li>
+                            </ul>
+                          </li>
+                          <li>
+                            Area B: General ICT Knowledge
+                            <ul>
+                              <li>Topic 3: Technology Resources</li>
+                              <li>Topic 4: Technology Building</li>
+                              <li>Topic 5: ICT Management</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-12 col-lg-4">
                     <div class="card">
-                      <p>Section 2: RPL Projects Report</p>
-                      <ul>
-                        <li>Topic 1: Project Summary</li>
-                        <li>Topic 2: Business Opportunity or Problem</li>
-                        <li>Topic 3: Solutions</li>
-                        <li>Topic 4: Results</li>
-                      </ul>
+                      <div class="card-body">
+                        <p>Section 2: RPL Projects Report</p>
+                        <ul>
+                          <li>Topic 1: Project Summary</li>
+                          <li>Topic 2: Business Opportunity or Problem</li>
+                          <li>Topic 3: Solutions</li>
+                          <li>Topic 4: Results</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -726,7 +747,7 @@
                       understood my requirements and helped me present my skills
                       in the best way possible. Highly recommended!
                     </p>
-                    <p>-Di Maria Rodriguez, Mining Engineer</p>
+                    <p>-Di-Maria Rodriguez, Mining Engineer</p>
                   </div>
                 </div>
               </div>

@@ -316,18 +316,17 @@
         justify-content: space-around;
         [data-bs-target] {
           box-shadow: var(--card-box-shadow);
-          width: auto;
+          width: fit-content;
           height: auto;
           text-indent: 0;
-          padding: 1rem 5rem;
+          padding: 1rem 2rem;
         }
       }
-      ul,
-      ol {
+      li {
         text-align: start;
       }
     }
-    @media (max-width: 576px) {
+    @media (max-width: 991px) {
       margin-top: 0;
       .carousel {
         .carousel-indicators {
