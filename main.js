@@ -22,7 +22,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.01 }
 );
 
 const hiddenElements = document.querySelectorAll("section");

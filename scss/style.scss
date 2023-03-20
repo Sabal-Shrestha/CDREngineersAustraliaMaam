@@ -44,9 +44,9 @@ body {
 section {
   padding: 5rem 0;
   opacity: 0;
-  transition: all 2s;
+  transition: opacity 2s, filter 2s, transform 2s;
   filter: blur(1px);
-  transform: translateY(20%);
+  transform: translateY(30%);
 }
 .animate-on-scroll {
   opacity: 1;
@@ -251,13 +251,13 @@ header {
   background: url("../img/curvy-lines-smooth.svg"), var(--color-secondary);
   background-repeat: repeat;
   background-size: cover;
-  animation: background-animation 450s linear infinite both;
+  animation: background-animation 100s linear infinite;
   @keyframes background-animation {
     0% {
-      background-position: 0% 0;
+      background-position: 0;
     }
     100% {
-      background-position: 6000% 0;
+      background-position: -2187.2px;
     }
   }
   ul {
@@ -441,12 +441,17 @@ footer {
     }
   }
   .contact-us {
-    background-color: var(--background-color-grey);
+    background: url("../img/curvy-lines-smooth-blue.svg"),
+      var(--background-color-grey);
+    background-repeat: repeat;
+    background-size: cover;
+    animation: background-animation 100s linear infinite;
     @include row-align-center;
     p {
       font-size: var(--h3-fontsize);
     }
     ul {
+      word-break: break-all;
       list-style-type: none;
       padding-left: 0;
       li {
