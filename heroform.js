@@ -47,7 +47,7 @@ class MyHeroForm extends HTMLElement {
               <textarea
                 name="Message"
                 id="MessageHero"
-                rows="1"
+                rows="3"
                 class="form-control"
                 placeholder="Enter Your Query"
               ></textarea>

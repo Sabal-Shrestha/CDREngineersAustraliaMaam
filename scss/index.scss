@@ -2,6 +2,7 @@
 .index {
   .hero {
     .col-12:has(img) {
+      padding: 0;
       position: relative;
       .card {
         position: absolute;
@@ -30,44 +31,66 @@
         &:first-of-type {
           background-color: #45c7ff;
           top: 150px;
+          left: 50px;
           animation-delay: 1s;
         }
         &:nth-of-type(2) {
           background-color: #cf8bd4;
-          left: 15%;
-          top: 50px;
+          top: 60px;
+          left: 160px;
           animation-delay: 2s;
         }
         &:nth-of-type(3) {
           background-color: #ff8345;
-          top: -20px;
-          left: 40%;
+          top: -28px;
+          left: 250px;
           animation-delay: 3s;
         }
         &:last-of-type {
           background-color: #20b15a;
-          top: 130px;
-          left: 60%;
+          top: 90px;
+          left: 420px;
           animation-delay: 4s;
+        }
+        @media (max-width: 991px) {
+          &:first-of-type {
+            left: 0;
+          }
+          &:nth-of-type(2) {
+            left: 60px;
+          }
+          &:nth-of-type(3) {
+            left: 120px;
+          }
+          &:last-of-type {
+            left: 280px;
+          }
         }
       }
     }
   }
   .review-with-form {
     padding: 0;
-    // @include row-align-center;
-    .carousel {
-      .carousel-item-next:not(.carousel-item-start),
-      .active.carousel-item-end {
-        transform: translateY(100%);
+    .row {
+      justify-content: space-around;
+      .col-12:has(.carousel) {
+        padding-top: 5rem;
+        .carousel {
+          .carousel-item-next:not(.carousel-item-start),
+          .active.carousel-item-end {
+            transform: translateY(100%);
+          }
+          .carousel-item-prev:not(.carousel-item-end),
+          .active.carousel-item-start {
+            transform: translateY(-100%);
+          }
+        }
       }
-      .carousel-item-prev:not(.carousel-item-end),
-      .active.carousel-item-start {
-        transform: translateY(-100%);
+      @media (min-width: 991px) {
+        .form-below-hero {
+          margin-top: -6rem;
+        }
       }
-    }
-    .forms {
-      margin-top: -6rem;
     }
   }
   .why-choose-us {
