@@ -54,6 +54,7 @@
     }
   }
   .review-with-form {
+    // padding: 0;
     @include row-align-center;
     .carousel {
       .carousel-item-next:not(.carousel-item-start),
