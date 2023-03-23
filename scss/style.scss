@@ -162,6 +162,11 @@ header {
     background-color: #fff;
   }
   .navbar {
+    .navbar-brand {
+      img {
+        margin: 0;
+      }
+    }
     .navbar-collapse {
       .navbar-nav {
         margin-left: auto;
@@ -261,7 +266,7 @@ header {
     }
   }
   ul {
-    columns: 3;
+    columns: 2;
     li {
       color: var(--color-primary);
     }
